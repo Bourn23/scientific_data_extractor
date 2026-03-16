@@ -43,4 +43,17 @@ Before running the pipeline, convert your PDF to markdown format with embedded i
 
    The extraction pipeline uses this naming format to correlate images with their source pages and figures for accurate data extraction and verification.
 
-3. **Pass to Extractor**: Use the markdown file and its associated images with your chosen implementation (data_extractor_not_agentic, agentic_extractor_basic, or agentic_extractor_with_harness).
+3. **Set up Gemini API Key**: The extraction pipelines use Google Gemini API for LLM-powered data extraction and analysis.
+
+   - Get your API key from [Google AI Studio](https://ai.google.dev/gemini-api/docs/api-key)
+   - Copy `.env.template` to `.env`:
+     ```bash
+     cp .env.template .env
+     ```
+   - Edit `.env` and replace `your_api_key_here` with your actual Gemini API key:
+     ```
+     GEMINI_API_KEY=your_actual_api_key_here
+     ```
+   - The `.env` file is ignored by git (see `.gitignore`) to keep your API key secure
+
+4. **Pass to Extractor**: Use the markdown file and its associated images with your chosen implementation (data_extractor_not_agentic, agentic_extractor_basic, or agentic_extractor_with_harness).
