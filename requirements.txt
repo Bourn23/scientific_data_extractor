@@ -1,0 +1,16 @@
+# Core API and ML dependencies
+google-genai>=0.3.0
+google-adk>=0.1.0
+pydantic>=2.0.0
+
+# Environment and configuration
+python-dotenv>=1.0.0
+
+# Image processing
+Pillow>=10.0.0
+
+# Data processing and visualization
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+scipy>=1.10.0
