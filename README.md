@@ -25,10 +25,22 @@ The verifier loop is crucial for high-quality extractions and is recommended for
 
 ## Getting Started
 
-All implementations expect markdown-converted PDF content as input. Use [markitdown](https://github.com/microsoft/markitdown) to convert your PDF:
+### Prerequisites
 
-```bash
-python -m markitdown <pdf_file> > document.md
-```
+Before running the pipeline, convert your PDF to markdown format with embedded images:
 
-Then pass the markdown to your chosen extractor implementation.
+1. **Convert PDF to Markdown** using [markitdown](https://github.com/microsoft/markitdown):
+   ```bash
+   python -m markitdown <pdf_file> > document.md
+   ```
+
+2. **Image Format**: Ensure images extracted from the PDF follow this naming convention:
+   ```
+   _page_{page_number}_figure_{figure_number}.jpeg
+   ```
+
+   Example: `_page_3_figure_6.jpeg` (image from page 3, 6th figure)
+
+   The extraction pipeline uses this naming format to correlate images with their source pages and figures for accurate data extraction and verification.
+
+3. **Pass to Extractor**: Use the markdown file and its associated images with your chosen implementation (data_extractor_not_agentic, agentic_extractor_basic, or agentic_extractor_with_harness).
