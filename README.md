@@ -38,6 +38,11 @@ The verifier loop is crucial for high-quality extractions and is recommended for
    pip install -r requirements.txt
    ```
 
+3. **Download spacy language model** (required for text processing):
+   ```bash
+   python -m spacy download en_core_web_sm
+   ```
+
 ### Prerequisites
 
 Before running the pipeline, convert your PDF to markdown format with embedded images:
