@@ -9,6 +9,9 @@ python-dotenv>=1.0.0
 # Image processing
 Pillow>=10.0.0
 
+# NLP and text processing
+spacy>=3.0.0
+
 # Data processing and visualization
 numpy>=1.24.0
 pandas>=2.0.0
